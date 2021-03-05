@@ -31,10 +31,6 @@ A few things are expected of students entering this class:
   * You are willing to participate in peer review and collaborate
     with a mentor.
 
-## Course description
-
-<TODO>
-
 ## Learning outcomes
 
 * Students will learn to operate autonomously in a realistic software engineering
