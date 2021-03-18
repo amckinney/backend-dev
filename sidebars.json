@@ -1,9 +1,12 @@
 {
   "docs": {
     "Welcome": [
-        "welcome"
+        "welcome",
+        "syllabus"
     ],
     "Units": [],
-    "Mentors": []
+    "Mentors": [
+        "training-guide"
+    ]
   }
 }
