@@ -4,8 +4,6 @@ title: Welcome to Backend Development!
 slug: /
 ---
 
-Welcome to the Backend Development course!
-
 ## Overview
 
 As computer science students, we're actively learning new foreign concepts,
