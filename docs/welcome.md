@@ -1,6 +1,6 @@
 ---
 id: welcome
-title: Welcome to Backend Development!
+title: Welcome
 slug: /
 ---
 
