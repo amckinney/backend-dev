@@ -34,6 +34,7 @@ A few things are expected of students entering this class:
 * Store data in a relational, SQL database.
 * Work with build systems and other automation techniques, such as CI workflows.
 * Write unit and integration tests.
+* Write code that writes valid code to augment your program's behavior.
 * Review code and provide constructive criticism.
 
 ## Curriculum
@@ -52,12 +53,77 @@ application, similar to [Jira][1] or [Asana][2].
 
 ### Unit 1: Command line programming
 
+The class will start by taking a closer look at one of the most foundational tools
+in a software engineer's arsenal: the command line. Wherever you're at in your
+software engineering career, shell programming saves time, speeds up your development
+flow, and frees up more time for application programming in your language of choice.
+
+Beyond the basics of the foundational Unix commands, you'll also learn how to make
+commands of your own, and better understand the importance of the command line interface.
+
 ### Unit 2: Server-side programming
+
+Although early in the curriculum, the core of this course takes place in the second unit on
+server-side programming. In this section, you will learn how to develop an HTTP server
+that you can run on your own machine, and respond to REST/JSON requests over the network.
+
+You will also learn about data modeling, storage, authentication, middleware, and how each
+of these components fit together to build a production-ready system.
 
 ### Unit 3: Remote procedure calls (RPC)
 
+Once you have a foundation of server-side programming, you'll continue to learn how remote
+procedure calls (RPCs) are used and integrated into existing systems. This section will also
+develop your understanding of microservices, as well as additional testing and performance
+enhancing strategies, such as caching.
+
 ### Unit 4: Continuous integration (CI)
+
+The implementation of an application is really only the first step in the software release
+process. At this stage, we'll learn how applications can be continuously tested and verified
+with Github Actions so that you're far less likely to publish bugs in production code.
+
+This section also depends on a working understanding of build systems, and will link back into
+the knowledge acquired in the first unit on command line programming.
 
 ### Unit 5: Metaprogramming
 
-### Unit 6: Project
+This section will teach you the basics of how programming languages are built: writing
+programs that write other programs. We won't be writing a compiler in this class, but we
+will see how software engineers can leverage metaprogramming to build powerful abstractions
+and tools in their production systems.
+
+### Unit 6: Final project
+
+At this point in the course, you will have developed a working application that you can
+continue to iterate on in a variety of ways. Whether it's additional CI automation,
+build system integration, extending the application with additional APIs, or anything else
+you can imagine, this is your opportunity to exercise your personal interests!
+
+The ending of the course is intentionally open-ended so that you experience what it's like
+to work as a seasoned software engineer on a team. You will design your own project, justify
+and argue its utility in a technical design document, and implement the specification you
+propose.
+
+## Code of Conduct
+
+All of your work **MUST** be your own. You are encouraged to reference and use open-source
+software (OSS) in your solutions, but you are expected to reference each of your references
+in your implementation, wherever applicable.
+
+For example,
+
+```go
+// commonInitialisms is used to ...
+// TODO: Put in link to go-lint here.
+var commonInitialisms = map[string]struct{}{
+    "API": struct{}{},
+    "DNS": struct{}{},
+    ...
+}
+```
+
+Fianlly, we ask that you be kind and helpful to your peers, the mentors, and the course staff.
+Collaboration and participation is one of the great joys of programming and software engineering,
+and the relationships you build in this course could create new open-source initiatives after
+the course is over.
