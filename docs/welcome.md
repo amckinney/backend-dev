@@ -4,10 +4,7 @@ title: Welcome to Backend Development!
 slug: /
 ---
 
-Welcome! This is the landing page for the Backend Development course.
-
-This page provides an overview of the course, which is still a
-work-in-progress.
+Welcome to the Backend Development course!
 
 ## Overview
 
@@ -16,10 +13,10 @@ data structures, and algorithms. However, in most undergraduate computer
 science curriciulums, we rarely get to incorporate these principles
 into designing a realistic software application.
 
-**This class is primarily meant for the students interested in learning more
-about software engineering.** Not all of you will have an opportunity to work
-in the software engineering industry via an internship, so this class is built
-to fill in the knowledge gaps that you would otherwise learn in the industry.
+**This class is primarily meant for the students interested in learning how to
+think about software engineering.** Not all of you will have an opportunity to
+work in the software engineering industry via an internship, so this class is
+built to fill in the knowledge gaps that you would otherwise learn in the industry.
 
 ## Readiness
 
@@ -33,5 +30,9 @@ A few things are expected of students entering this class:
 
 ## Learning outcomes
 
-* Students will learn to operate autonomously in a realistic software engineering
-  environment.
+* Learn to operate autonomously in a realistic software engineering environment.
+* Develop an HTTP server that defines a REST/JSON API.
+* Store data in a relational, SQL database.
+* Work with build systems and other automation techniques, such as CI workflows.
+* Unit and integration testing strategies.
+* Review code and provide constructive criticism.
