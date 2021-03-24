@@ -1,10 +1,8 @@
 ---
 id: 01-lesson
-title: Lesson 1
+title: The command line
 slug: /lessons/1
 ---
-
-## The command line
 
 At this stage in your programming career, you're likely well acquainted with
 the command line and basic shell programming. Whether it's navigating around
