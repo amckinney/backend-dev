@@ -4,7 +4,14 @@
         "welcome",
         "syllabus"
     ],
-    "Units": [],
+    "Units": [
+        {
+            "Command line programming": [
+                "01-lesson",
+                "01-assignment"
+            ]
+        }
+    ],
     "Mentors": [
         "training-guide"
     ]

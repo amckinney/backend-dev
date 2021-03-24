@@ -1,6 +1,6 @@
 ---
 id: training-guide
-title: Training Guide
+title: Training guide
 slug: /training-guide
 ---
 
