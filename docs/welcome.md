@@ -114,11 +114,14 @@ in your implementation, wherever applicable.
 For example,
 
 ```go
-// commonInitialisms is used to ...
-// TODO: Put in link to go-lint here.
+// commonInitialisms is a set of common initialisms.
+// This is referenced from the same list found in go-lint.
+// https://github.com/golang/lint/blob/83fdc39ff7b56453e3793356bcff3070b9b96445/lint.go#L770
 var commonInitialisms = map[string]struct{}{
-    "API": struct{}{},
-    "DNS": struct{}{},
+	"ACL":   struct{}{},
+	"API":   struct{}{},
+	"ASCII": struct{}{},
+	"CPU":   struct{}{},
     ...
 }
 ```
