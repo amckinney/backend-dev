@@ -1,6 +1,6 @@
 ---
 id: 01-lesson
-title: The command line
+title: The shell
 slug: /lessons/1
 ---
 
