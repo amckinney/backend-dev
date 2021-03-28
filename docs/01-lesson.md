@@ -131,3 +131,54 @@ fi
 ```
 
   [3]: https://phoenixnap.com/kb/change-bash-prompt-linux
+
+### Control input and output
+
+Mastering the command line requires that control the input and output of commands and
+stitch them together in a myriad of ways. The following sections will describe the
+fundamentals of command input and output.
+
+#### Positional parameters
+
+The parameters (or arguments) written after the command's name are referred to as
+[positional parameters][4]. This is one of the ways we can give the command values
+specific to the exectuion we run. For example, in the `which` command described above,
+the command we want to search for is specified immediately afterwards (e.g. in `which sed`,
+`sed` is a positional parameter for `which`).
+
+However, it's important to note that positional parameters are zero-indexed, and the first
+positional parameter will always be the name of the program you are executing. Each posiitonal
+parameter is referred to as `$<digit(s)>` (e.g. in `which sed`, `$0` is set to `which`, and
+`$1` is set to `sed`).
+
+Thus, when we implement programs that require input given on the command line, we need to access
+these values according to their positional parameter index. The order the command defines and
+expects is part of our [API][5] contract (which is described in more detail later). This abstraction
+is defined in different ways depending on the programming language, but the principle remains the same.
+
+  [4]: https://www.gnu.org/software/bash/manual/html_node/Positional-Parameters.html
+  [5]: https://en.wikipedia.org/wiki/API
+
+#### Command line flags
+
+Flags (or options) are another way for users to specify input to a command. The structure of a flag
+varies depending on its purpose; some require values assigned to them, whereas others can simply exist
+to specify intent.
+
+For example, in `which -a`, the `-a` is a flag that tells the command to list all instances of executable
+programs found instead of just the first one found. We don't need to assign a value to `-a`, specifying
+it on its own is sufficient. In `sed -f <filename>`, the `<filename>` must exist alongside the `-f` flag
+because it is used to control *where* the editing commands should be appended from (for details, read the
+flag by running `man sed`).
+
+#### I/O redirection
+
+The three primary [file descriptors][6] are `stdin`, `stdout`, and `stderr`, each of which are used in
+traditional command executions. The `std` prefix standards for "standard", whereas `in`, `out`, and `err`
+stand for "input", "output", and "error", respectively. [thoughtbot][7] wrote a [great overview][8]
+of each of these file descriptors and how they are used to compose commands together; please read it to
+learn more!
+
+  [6]: https://en.wikipedia.org/wiki/File_descriptor
+  [7]: https://thoughtbot.com
+  [8]: https://thoughtbot.com/blog/input-output-redirection-in-the-shell
