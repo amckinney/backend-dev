@@ -21,6 +21,58 @@ development experience.
 
   [1]: https://www.gnu.org/software/bash
 
+### $PATH
+
+The `$PATH` [environment variable][2] defines the locations in your local
+filesystem where executable programs exist. Note that, like all other
+environment variables, the `$PATH` is configurable so that you can customize
+where your shell finds its executable programs.
+
+Multiple locations are configured by separating directories with a `:` delimiter.
+For example, I can configure my shell to find executable programs in the `/usr/bin`
+and `/usr/local/bin` directories by setting the following.
+
+```sh
+$ export PATH=/usr/bin:/usr/local/bin
+```
+
+  [2]: https://en.wikipedia.org/wiki/Environment_variable
+
+#### which
+
+The `which` command is used to locate a program file in the currently configured `$PATH`.
+You can use the `man` (short for manual), to read more about this command and other default
+UNIX commands.
+
+```sh
+$ man which
+WHICH(1)                  BSD General Commands Manual                 WHICH(1)
+
+NAME
+     which -- locate a program file in the user's path
+
+SYNOPSIS
+     which [-as] program ...
+...
+```
+
+Now, we can use `which` to find the location of itself by providing it as input.
+
+```sh
+$ which which
+/usr/bin/which
+```
+
+The output we see here tells us that the `which` command was located at `/usr/bin/which`,
+which is only discoverable because we've configured `/usr/bin` in our `$PATH`. If we
+modify the `$PATH` so that it no longer searches for commands in `/usr/bin`, you'll notice
+that the command no longer works.
+
+```sh
+$ PATH=/usr/local/bin which which
+-bash: which: command not found
+```
+
 ### .bash_profile
 
 The `.bash_profile` contained in your home directory (traditionally accessed
@@ -67,7 +119,7 @@ so that we prevent ourselves from unintentionally modifying the environment ever
 we create a new shell.
 
 With all that said, the `~/.bashrc` file is often used to define aliases, functions,
-or other tools you define to customize your terminal (such as [custom prompts][2]).
+or other tools you define to customize your terminal (such as [custom prompts][3]).
 Given that the `~/.bash_profile` and `~/.bashrc` are decoupled, it's also common to
 reference the `~/.bashrc` from within the `~/.bash_profile` so that every time you
 login, both files are executed.
@@ -78,4 +130,4 @@ if [ -f ~/.bashrc ]; then
 fi
 ```
 
-  [2]: https://phoenixnap.com/kb/change-bash-prompt-linux
+  [3]: https://phoenixnap.com/kb/change-bash-prompt-linux
