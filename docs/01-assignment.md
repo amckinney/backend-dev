@@ -135,3 +135,8 @@ repository you created from the template.
   [6]: https://gobyexample.com/command-line-flags
   [7]: https://gobyexample.com/command-line-arguments
   [8]: https://github.com/spf13/cobra
+
+## Submitting
+
+Notify your mentor that you have created the pull requests in both the `dotfiles` and `issue-tracker`
+repositories. Your mentor will review your code and assign a grade before your next weekly check-in.
