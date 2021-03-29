@@ -79,8 +79,59 @@ should be implemented according to the following:
 
 Make sure that all of the above constraints are met to receive full credit for this task.
 You are welcome to (and expected to) consult the internet to implement different components
-of this program.
+of this program. Once you are finished, add it to your `dotfiles` repository under the `bin`
+directory, and create a pull request that contains your solution.
 
 > You will find the `git bundle`, `tar`, and `gzip` commands useful.
 
   [3]: https://en.wikipedia.org/wiki/Usage_message
+
+## Go CLI
+
+In your final task for this assignment, we'll switch gears and implement a simple command for
+the `Issue Tracker` application written in Go. If you haven't already, create a new Github
+repository from the [issue-tracker-template][4], and make sure that you can run it with
+the following command.
+
+```sh
+$ go run ./cmd/istkr/main.go
+...    INFO    istkr/main.go:57    Server successfully started
+```
+
+You can verify that the server is running successfully by issuing a `curl` command in a
+separate terminal. For more information, GeeksForGeeks has a [great tutorial for curl][5].
+
+```sh
+$ curl -X POST 127.0.0.1:3000/issues -d '{"title": "Example Issue", "body": "This is an example issue."}'
+{"id":"...","title":"Example Issue","body":"This is an example issue.","created_at":"...","updated_at":"..."}
+```
+
+> 127.0.0.1:3000 is the default host:port for the `Issue Tracker` application, which you can
+> see by reading the implementation in the `main` package.
+
+Now that you can see how to make requests to the `Issue Tracker` application with `curl`,
+we can improve this experience by creating a command that interfaces with the `Issue Tracker`
+API. Specifically, we can give our users a command that is tailored to our application and
+feels more ergonomic than the `curl` command shown above.
+
+* Implement a `go` program called `istkr-client` (short for `Issue Tracker Client`), that
+  lets users create issues (similar to the `curl` command above).
+* You are free to implement this feature in terms of positional parameters, flags, or a
+  combination of the two.
+* The command must define the following inputs (specified as either parameters or flags):
+  1. The issue's title
+  2. The issue's body
+  3. The address to send the request to (`127.0.0.1:3000` is an example address in this case)
+
+When you are finished, create a pull request that contains your solution in the `issue-tracker`
+repository you created from the template.
+
+> For help on getting started with implementing Go command line tools, make sure to read up
+> on the documentation for [command-line flags][6] and [command-line arguments][7]. You are
+> also welcome to use open-source libraries, such as [cobra][8], if you are so inclined.
+
+  [4]: https://github.com/amckinney/issue-tracker-template
+  [5]: https://www.geeksforgeeks.org/curl-command-in-linux-with-examples
+  [6]: https://gobyexample.com/command-line-flags
+  [7]: https://gobyexample.com/command-line-arguments
+  [8]: https://github.com/spf13/cobra
