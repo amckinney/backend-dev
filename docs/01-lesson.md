@@ -130,6 +130,10 @@ if [ -f ~/.bashrc ]; then
 fi
 ```
 
+> It's also common for developers to define aliases in a separate `~/.aliases` file
+> and source it from their `~/.bashrc` file (rather than defining them in their
+> `~/.bashrc` itself).
+
   [3]: https://phoenixnap.com/kb/change-bash-prompt-linux
 
 ### Control input and output
