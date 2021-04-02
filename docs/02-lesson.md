@@ -103,3 +103,19 @@ there are different primary key constraints in specific technologies.
   [10]: https://github.com/amckinney/issue-tracker-template/blob/main/internal/entity/doc.go
   [11]: https://github.com/amckinney/issue-tracker-template/blob/main/internal/model/doc.go
   [12]: https://github.com/amckinney/issue-tracker-template/blob/main/data/sql/migrations/001_initial_schema.up.sql#L2
+
+### Relational databases
+
+This course focuses on relational databases, and uses [SQLite][13] in particular.
+Note that NoSQL databases certainly have a variety of benefits, but there is always
+a tradeoff ([there ain't no such thing as a free lunch][14]). Discussing the tradeoffs
+between these technologies is out-of-scope for this class, but we encourage you to
+research this topic on your own! This could be a particularly interesting avenue to
+explore in the **Final Project**.
+
+[Xplenty][15] published a great blog post that describes how to implement decoupled
+database entities. Please read and review it before continuing to your assignment.
+
+  [13]: https://www.sqlite.org/index.html
+  [14]: https://en.wikipedia.org/wiki/There_ain%27t_no_such_thing_as_a_free_lunch
+  [15]: https://www.xplenty.com/blog/complete-guide-to-database-schema-design-guide/
