@@ -4,6 +4,9 @@
         "welcome",
         "syllabus"
     ],
+    "Mentors": [
+        "training-guide"
+    ],
     "Units": [
         {
             "Command line programming": [
@@ -19,9 +22,6 @@
                 "03-assignment"
             ]
         }
-    ],
-    "Mentors": [
-        "training-guide"
     ]
   }
 }
