@@ -1,6 +1,6 @@
 ---
 id: 03-lesson
-title: Authentication
+title: Authentication and Authorization
 slug: /lessons/3
 ---
 
@@ -9,10 +9,9 @@ we turn out attention to authentication and security. We'll learn
 about the difference between authentication and authorization,
 sometimes referred to as *authn* and *authz*, respectively. From
 there, we'll learn about common protocols implemented by a large
-number of companies that enable features like *single sign-on*
-and *multi-factor authentication* (MFA).
+number of companies that enable features like *single sign-on* (SSO).
 
-## Authentication vs. authorization
+## What's the difference?
 
 These terms are so often misused and misinterpreted that it's worth
 dedicating a short section focused on clearing it up.
@@ -120,6 +119,10 @@ contained (which prevents users from obfuscating information found in the `<$hea
 and `<$payload>`), then determining what capabilities this user has based on the claims
 contained in the `<$payload>`, and finally serving the request by either permitting the
 operation or rejecting it based on unsatisfactory permissions.
+
+## OIDC
+
+TODO: Discuss OIDC and how it enables SSO.
 
   [11]: https://auth0.com/docs/tokens/json-web-tokens/json-web-token-claims
   [12]: https://tools.ietf.org/html/rfc7519#section-4.1.2
