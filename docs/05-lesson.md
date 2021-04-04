@@ -4,9 +4,9 @@ title: Calling APIs
 slug: /lessons/5
 ---
 
-We've covered a wide variety of concepts that pertain to server-side
-programming, but now we shift our attention to integrating APIs from
-other external servers. In this lesson, we will learn how we can add
+We've covered a wide variety of concepts that pertain to command line
+and server-side programming, but now we shift our attention to integrating
+APIs from external services. In this lesson, we will learn how we can add
 dependencies on other services (that we do not operate ourselves) in
 order to simplify or improve our application's functionality. We will
 also learn about *microservices* and discuss how the *RPC* abstraction
@@ -69,3 +69,84 @@ for application servers exposed over the internet!
   [6]: https://whatis.techtarget.com/definition/monolithic-architecture
   [7]: https://en.wikipedia.org/wiki/Unix_philosophy
   [8]: https://www.n-ix.com/microservices-vs-monolith-which-architecture-best-choice-your-business
+
+## RPCs in Go
+
+*RPCs* may be a new term, but it's actually something you're already familiar with
+in Go. In fact, you've wrote a command line tool that issues an RPC to the `Issue
+Tracker` application in the [first assignment](./01-assignment#go-cli)! To be clear,
+the CLI *calls* the `/issues` API endpoint via an RPC using JSON as an encoding scheme
+and HTTP as a transport protocol. This is a mouthful, but you're now familiar with each
+of these components! If any of these components or definitions is still not clear, we
+encourage you to find additional resources online. Independent reserach and learning is
+a big part of software engineering, so it's an important skill to continually practice!
+
+So we've seen how we can create a command line program to call an external service, but
+how does a server call another service? Well, the interaction is actually very similar;
+the caller (both the CLI and the server) constructs an instance of an [http.Client][9],
+and uses the [http.Client.Do][10] method to issue the call. As you can see, it uses
+the same `http.Request` and `http.Response` types that we mentioned above.
+
+For example, suppose that we wanted to make an HTTP request to Github in order to get
+all of the repositories contained within the [golang organization][11]. We can consult
+the Github documentation and find the [list organization repositories][12] API and write
+client-side code that interacts with it.
+
+```go
+// repository is a subset of the Github repository response
+// structure used in the listOrganizationRepositories endpoint.
+// For details, please see the following:
+// https://docs.github.com/en/rest/reference/repos#list-organization-repositories
+type repository struct {
+    FullName string `json:"full_name"`
+}
+
+// listOrganizationRepositories lists all of the repositories associated
+// with the given organization name.
+func listOrganizationRepositories(
+    client *http.Client,
+    organization string,
+) ([]*repository, error) {
+	request, err := http.NewRequestWithContext(
+		ctx,
+		"GET",
+        fmt.Sprintf("https://api.github.com/orgs/%s/repos", organization),
+		nil,
+	)
+	if err != nil {
+		return nil, err
+	}
+	request.Header.Add("Content-Type", "application/json")
+	request.Header.Add("Accept", "application/vnd.github.v3+json") // Github API recommendation
+
+	response, err := client.Do(request)
+	if err != nil {
+		return nil, err
+	}
+	defer response.Body.Close()
+
+	if response.StatusCode != http.StatusOK {
+      return nil, fmt.Errorf("failed to list organization repositories: %v", response.StatusCode)
+	}
+    return decodeRepositories(response.Body)
+}
+
+// decodeRepositories decodes a slice of repositories from the given io.Reader.
+func decodeRepositories(reader io.Reader) ([]*repository, error) {
+    var repositories []*repository
+	if err := json.NewDecoder(r).Decode(&repositories); err != nil {
+		return nil, err
+	}
+	return repositories, nil
+}
+```
+
+The above code snippet has a fair number of moving parts, so take your time to
+understand each line of code and its significance in the interaction. This will be
+especially relevant in the [upcoming assignment](./05-assignment.md)!
+
+  [9]: https://golang.org/pkg/net/http/#Client
+  [10]: https://golang.org/pkg/net/http/#Client.Do
+  [11]: https://github.com/golang
+  [12]: https://docs.github.com/en/rest/reference/repos#list-organization-repositories
+
