@@ -19,7 +19,9 @@ that we're primarily concerned with [middleware in distributed applications][2].
 In this particular definition, *middleware* is functionality that sits between
 the client and the API that they're interacting with. Note that *middleware* is
 often (but not always) implemented in the same server process as the API and
-therefore *wraps* the API's core functionality.
+therefore *wraps* the API's core functionality. Implementing a [rate limiter
+in Redis][3] is a fascinating counterexample of a middleware that delegates to
+an external service (or database in this case).
 
 To drive this point in, *middleware* is yet another example of an abstraction
 *layer* that can be visualized like an onion, where the core of the onion is
@@ -28,15 +30,16 @@ up the *middleware*.
 
   [1]: https://en.wikipedia.org/wiki/Middleware
   [2]: https://en.wikipedia.org/wiki/Middleware_(distributed_applications)
+  [3]: https://redislabs.com/redis-best-practices/basic-rate-limiting
 
 ## Middleware in Go
 
 Each programming language has a unique way to construct, define, and instrument
 middleware in your application. The `Issue Tracker` application takes advantage
-of the [chi][3] HTTP framework that provides a handy [chi.Mux.Use][4] method to
+of the [chi][4] HTTP framework that provides a handy [chi.Mux.Use][5] method to
 easily configure middleware, but it helps to see how this works under the hood.
 
-Using the standard [net/http][5] library, a no-op, passthrough middleware can be
+Using the standard [net/http][6] library, a no-op, passthrough middleware can be
 implemented with the following:
 
 ```go
@@ -72,6 +75,6 @@ func printMiddleware(next http.Handler) http.Handler {
 }
 ```
 
-  [3]: https://github.com/go-chi/chi
-  [4]: https://pkg.go.dev/github.com/go-chi/chi#Mux.Use
-  [5]: https://golang.org/pkg/net/http
+  [4]: https://github.com/go-chi/chi
+  [5]: https://pkg.go.dev/github.com/go-chi/chi#Mux.Use
+  [6]: https://golang.org/pkg/net/http
