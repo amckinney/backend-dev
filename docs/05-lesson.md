@@ -74,8 +74,8 @@ for application servers exposed over the internet!
 
 *RPCs* may be a new term, but it's actually something you're already familiar with
 in Go. In fact, you've wrote a command line tool that issues an RPC to the `Issue
-Tracker` application in the [first assignment](./01-assignment)! To be clear, the
-CLI *calls* the `/issues` API endpoint via an RPC using JSON as an encoding scheme
+Tracker` application in the [first assignment](./01-assignment.md#go-cli)! To be clear,
+the CLI *calls* the `/issues` API endpoint via an RPC using JSON as an encoding scheme
 and HTTP as a transport protocol. This is a mouthful, but you're now familiar with each
 of these components! If any of these components or definitions is still not clear, we
 encourage you to find additional resources online. Independent research and learning is
