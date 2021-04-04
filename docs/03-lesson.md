@@ -1,6 +1,6 @@
 ---
 id: 03-lesson
-title: Authentication and Authorization
+title: Authentication
 slug: /lessons/3
 ---
 
@@ -11,7 +11,7 @@ sometimes referred to as *authn* and *authz*, respectively. From
 there, we'll learn about common protocols implemented by a large
 number of companies that enable features like *single sign-on* (SSO).
 
-## What's the difference?
+## Authentication vs. Authorization
 
 These terms are so often misused and misinterpreted that it's worth
 dedicating a short section focused on clearing it up.
