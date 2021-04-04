@@ -27,7 +27,9 @@
         {
             "RPC": [
                 "05-lesson",
-                "05-assignment"
+                "05-assignment",
+                "06-lesson",
+                "06-assignment"
             ]
         }
     ]
