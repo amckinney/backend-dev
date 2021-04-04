@@ -5,7 +5,7 @@ slug: /assignments/1
 ---
 
 > Your first assignment requires that you have read and understand
-> [the shell](./01-lesson.md).
+> [The shell](./01-lesson.md).
 
 ## Overview
 
