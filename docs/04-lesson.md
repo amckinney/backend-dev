@@ -54,17 +54,17 @@ func nopMiddleware(next http.Handler) http.Handler {
 }
 ```
 
-You'll notice that we can add code that executes either *before* or *after* the
+You'll notice that we can write code that executes both *before* or *after* the
 call is made to the `next` middleware in the chain. For example, if we want to
 print a message when a request is received and after the request was served, we
-can redefine the `nopMiddleware` as a `printMiddleware` like so:
+can redefine the `nopMiddleware` as a `printerMiddleware` like so:
 
 ```go
-// printMiddleware is a printer middleware, such that it
+// printerMiddleware is a printer middleware, such that it
 // prints a message when it receives a request, as well as
 // after the request was served by the next http.Handler
 // in the chain.
-func printMiddleware(next http.Handler) http.Handler {
+func printerMiddleware(next http.Handler) http.Handler {
   return http.HandlerFunc(
     func(w http.ResponseWriter, r *http.Request) {
       fmt.Printf("Received request for URL path: %q\n", r.URL.Path)
@@ -78,3 +78,29 @@ func printMiddleware(next http.Handler) http.Handler {
   [4]: https://github.com/go-chi/chi
   [5]: https://pkg.go.dev/github.com/go-chi/chi#Mux.Use
   [6]: https://golang.org/pkg/net/http
+
+## Middleware chain
+
+Given that each of these *middleware* functions actually implements the `http.Handler`
+interface, either of them could be the `next` in the `next.ServeHTTP` call, thus
+creating an ordered *chain*! For example, we could instrument our application so that
+the `nopMiddleware` executes, then the `printerMiddleware` executes, and finally the
+business logic `http.Handler` implement by the `Issue Tracker` application before
+the response is propagated back through the chain in the reverse order.
+
+> You will implement this in [Assignment 4](./04-assignment.md), so this is
+> intentionally left as an exercise to the reader.
+
+## Practical use cases
+
+The scope of a *middleware* is fairly small, but its use cases are only limited by
+your creativity. Business logic can be tremendously simplified by moving specific
+functionality into a chain of middleware.
+
+For example, if your application needs to **validate client requests** based on the
+parameters they provide (e.g. the title of the issue should only be 64 characters),
+you could roll out a `validateMiddleware` that handles this for you.
+
+Regardless of the implementation of your rate limiter, you could add a `rateLimitMiddleware`
+that delegates to rate limiter service and enforce it in the chain. This could similarly
+be done for a *cache* implementation, which is something we'll discuss in the *RPC* unit!
