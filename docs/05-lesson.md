@@ -41,7 +41,7 @@ a new software architecture has been born called the [microservice
 architecture][5]. In short, *microservices* are services responsible for
 a small set of functionality and built so that they can be *composed* together
 to orchestrate complex interactions. Note that the alternative is referred to
-as a [Monolithic architecture][6], which implies that the application is built
+as a [monolithic architecture][6], which implies that the application is built
 entirely in one piece.
 
 Microservices are yet another example of a trend towards reducing *coupling*
@@ -74,11 +74,11 @@ for application servers exposed over the internet!
 
 *RPCs* may be a new term, but it's actually something you're already familiar with
 in Go. In fact, you've wrote a command line tool that issues an RPC to the `Issue
-Tracker` application in the [first assignment](./01-assignment#go-cli)! To be clear,
-the CLI *calls* the `/issues` API endpoint via an RPC using JSON as an encoding scheme
+Tracker` application in the [first assignment](./01-assignment)! To be clear, the
+CLI *calls* the `/issues` API endpoint via an RPC using JSON as an encoding scheme
 and HTTP as a transport protocol. This is a mouthful, but you're now familiar with each
 of these components! If any of these components or definitions is still not clear, we
-encourage you to find additional resources online. Independent reserach and learning is
+encourage you to find additional resources online. Independent research and learning is
 a big part of software engineering, so it's an important skill to continually practice!
 
 So we've seen how we can create a command line program to call an external service, but
@@ -104,6 +104,7 @@ type repository struct {
 // listOrganizationRepositories lists all of the repositories associated
 // with the given organization name.
 func listOrganizationRepositories(
+    ctx context.Context,
     client *http.Client,
     organization string,
 ) ([]*repository, error) {
@@ -134,7 +135,7 @@ func listOrganizationRepositories(
 // decodeRepositories decodes a slice of repositories from the given io.Reader.
 func decodeRepositories(reader io.Reader) ([]*repository, error) {
     var repositories []*repository
-	if err := json.NewDecoder(r).Decode(&repositories); err != nil {
+	if err := json.NewDecoder(reader).Decode(&repositories); err != nil {
 		return nil, err
 	}
 	return repositories, nil
@@ -149,4 +150,3 @@ especially relevant in the [upcoming assignment](./05-assignment.md)!
   [10]: https://golang.org/pkg/net/http/#Client.Do
   [11]: https://github.com/golang
   [12]: https://docs.github.com/en/rest/reference/repos#list-organization-repositories
-
