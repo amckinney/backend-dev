@@ -120,11 +120,28 @@ and `<$payload>`), then determining what capabilities this user has based on the
 contained in the `<$payload>`, and finally serving the request by either permitting the
 operation or rejecting it based on unsatisfactory permissions.
 
-## OIDC
-
-TODO: Discuss OIDC and how it enables SSO.
-
   [11]: https://auth0.com/docs/tokens/json-web-tokens/json-web-token-claims
   [12]: https://tools.ietf.org/html/rfc7519#section-4.1.2
   [13]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie
   [14]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cookie
+
+## OIDC and OAUTH2
+
+The [OpenID Connect Protocol][15] (*OIDC*) is a protocol built on top of [OAUTH2][16].
+In short, *OIDC* is used to implement [single sign-on][17] (*SSO*), which makes it
+possible for users to authenticate themselves with other popular applications. For example,
+you've probably signed in to an application with `Google`, `Facebook`, `Apple`, or some
+other identity provider - this is *OIDC* in action! When you log in with your identity
+provider of choice, your personal information is returned in the form of a *JWT*, which is
+then used to authenticate future requests (as described above).
+
+[Okta][18] (another popular identity provider) created a fantastic video that explains
+*OIDC* in greater detail - please watch it by clicking on the image below before proceeding
+to the assignment!
+
+[![OIDC Explained](https://img.youtube.com/vi/t18YB3xDfXI/0.jpg)](https://www.youtube.com/watch?v=t18YB3xDfXI)
+
+  [15]: https://auth0.com/docs/protocols/openid-connect-protocol
+  [16]: https://oauth.net/2
+  [17]: https://en.wikipedia.org/wiki/Single_sign-on
+  [18]: https://www.okta.com
