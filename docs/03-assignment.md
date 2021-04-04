@@ -4,7 +4,7 @@ title: Assignment 3
 slug: /assignments/3
 ---
 
-> Your first assignment requires that you have read and understand
+> Your third assignment requires that you have read and understand
 > [Authentication](./03-lesson.md).
 
 ## Overview

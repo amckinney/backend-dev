@@ -4,7 +4,7 @@ title: Assignment 2
 slug: /assignments/2
 ---
 
-> Your first assignment requires that you have read and understand
+> Your second assignment requires that you have read and understand
 > [Data modeling](./02-lesson.md).
 
 ## Overview
