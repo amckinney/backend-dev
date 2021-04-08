@@ -9,8 +9,9 @@ slug: /assignments/7
 
 ## Overview
 
-We've been writing a lot of code, and recently added some important
-tests that should be verified before we release anything to production.
-In this assignment, you will add some continuous integration workflows
-to the Github repository that contains your version of the `Issue Tracker`
-application.
+In this assignment, you will add some continuous integration workflows to the
+Github repository that contains your version of the `Issue Tracker` application.
+You will also instrument the repository with [Codecov][1], which is a tool that
+automatically displays code coverage statistics.
+
+  [1]: https://docs.codecov.io
