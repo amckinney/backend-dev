@@ -31,6 +31,12 @@
                 "06-lesson",
                 "06-assignment"
             ]
+        },
+        {
+            "CI": [
+                "07-lesson",
+                "07-assignment"
+            ]
         }
     ]
   }
