@@ -49,3 +49,40 @@ tradeoffs that come with continuous deployment.
 
   [3]: https://www.atlassian.com/continuous-delivery/continuous-deployment
   [4]: https://argoproj.github.io/argo-cd
+
+## Cron jobs
+
+In software applications, there are situations that require a routine to keep
+a one or more components in sync with each other. Applications should strive to
+handle such synchronization themselves in their natural state, but this is not
+always possible.
+
+For example, suppose that we have the `Issue Tracker` application replicate data between
+our relational database and an external storage solution, such as [Amazon S3][5] or
+[Google Cloud Storage][6] (GCS). Given that our relational database has [transactional
+semantics][7], we're put in an awkward position when users request to *delete* their
+data.
+
+When a user asks to delete their data, do we first delete the record from the external storage
+solution and then remove it from our relational database, or do we first remove it from the
+relational database and then remove it from the external storage soltuion? What happens if
+either of these calls fails?
+
+The external storage solution does not abide to the transaction created for our application,
+so we can't rollback the external storage deletion and our system is thus in an inconsistent
+state (i.e. data is stored somewhere, but not in another).
+
+In this situation, it helps to have periodic [cron jobs][8] to fix these inconsistencies when
+they arise. A cron job can be run at some configurable frequency, and query the external storage
+solution to see if any of records don't have a matching record in the relational database, and
+remove them if so.
+
+> In general, most applications don't need to rely on cron jobs to keep things in a
+> consistent state. The example above is meant to illustrate a valid use case, but is
+> not meant to encourage their wide use in production systems. When in doubt, leave them
+> out.
+
+  [5]: https://aws.amazon.com/s3
+  [6]: https://cloud.google.com/storage
+  [7]: https://en.wikipedia.org/wiki/Database_transaction
+  [8]: https://en.wikipedia.org/wiki/Cron
