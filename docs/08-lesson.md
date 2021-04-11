@@ -39,8 +39,7 @@ However, there's always a tradeoff: a compiler ideally produces efficient code i
 the low-level representation, but it's often not as efficient as it could be written
 manually. This is not always the case though; [Common Lisp][3] (which compiles to C)
 was found to be faster than C in [a specific area of genetic programming][4]. This
-last knowledge domain is summarized as [compiler optimization][5], which is a rich
-area of research.
+is an example of [compiler optimization][5], which is a rich area of research.
 
 The way compilers are written typically adopt a particularly phased strategy.
 The four traditional phases are listed below in the order they occur:
@@ -75,7 +74,9 @@ func main() {
 With this program as input, the *lexer* would produce a series of tokens that contains
 something along the lines of the following (where each element is an individual *token*):
 
-  - ["package", "main", "func", "main", "(", ")", "{", "return", "}"]
+```json
+["package", "main", "func", "main", "(", ")", "{", "return", "}"]
+```
 
 As you can see, certain elements are grouped together (such as alphanumerics), whereas
 others aren't (such as the individual separator elements). Now that we have tokenized
@@ -218,7 +219,7 @@ Now we can compile the `main.go` file into an executable file named `hello-world
 
 ```sh
 $ go -o hello-world main.go
-$ cat hellow-world
+$ cat hello-world
 <byte code>
 ```
 
