@@ -126,7 +126,7 @@ var commonInitialisms = map[string]struct{}{
 }
 ```
 
-Fianlly, we ask that you be kind and helpful to your peers, the mentors, and the course staff.
+Finally, we ask that you be kind and helpful to your peers, the mentors, and the course staff.
 Collaboration and participation is one of the great joys of programming and software engineering,
 and the relationships you build in this course could create new open-source initiatives after
 the course is over.
