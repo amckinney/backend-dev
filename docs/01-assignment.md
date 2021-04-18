@@ -15,7 +15,7 @@ a variety of ways. By the end, you will have developed multiple commands
 that contains your environment-specific files so that you can easily restore
 your development environment if you ever replace your current hardware.
 
-## dotfiles
+## 1 dotfiles
 
 You'll be surprised at how often you need to restore your development
 environment from scratch on new hardware. Whether your computer is misplaced,
@@ -52,7 +52,7 @@ Once each of these files are initialized, proceed to do the following:
   [1]: https://phoenixnap.com/kb/change-bash-prompt-linux
   [2]: https://git-scm.com/docs/git-config
 
-## Bash script
+## 2 Bash script
 
 Now that you have your environment setup and are familiar with basic `bash` syntax,
 your next task is to implement an executable program written in `bash`, which is
@@ -86,7 +86,7 @@ directory, and create a pull request that contains your solution.
 
   [3]: https://en.wikipedia.org/wiki/Usage_message
 
-## Go CLI
+## 3 Go CLI
 
 In your final task for this assignment, we'll switch gears and implement a simple command for
 the `Issue Tracker` application written in Go. If you haven't already, create a new Github
