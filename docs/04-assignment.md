@@ -31,7 +31,7 @@ appropriate HTTP error code.
 > In other words, we don't care *who* is allowed to update specific issues; we only
 > care that the user is authenticated and tied to a `User` that we keep track of.
 
-  [1]: https://swagger.io/docs/specification/authentication/bearer-authentication
+  [1]: https://tools.ietf.org/html/rfc6750
 
 ## 2 Authentication middleware
 
@@ -57,9 +57,9 @@ take effect on every call. Implement a *middleware chain* so that each middlewar
 composed together and run in a configurable order (i.e. logger -> authentication or
 authentication -> logger).
 
-> Think about what order the middleware should be configured in this case. Should authentication
-> happen before the logger, or vice versa? What other middleware do you imagine we can add
-> later, and what order do you think they will be configured?
+> Think about what order the middleware should be configured in this case. Should
+> authentication happen before the logger, or vice versa? What other middleware do you
+> imagine we can add later, and what order do you think they will be configured?
 
 ## Submitting
 

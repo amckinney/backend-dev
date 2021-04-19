@@ -17,15 +17,18 @@ their authenticity with cryptographic signatures.
 ## 1 JWT generation
 
 Your first task is to implement a JWT token generator signed with
-the SHA-256 hash algorithm. You will need to configure a server-side
+the [SHA-256][1] hash algorithm. You will need to configure a server-side
 secret that will be used to sign and verify the JWT tokens you create.
 The secret MUST be configured via a command line flag OR an environment
 variable. You are allowed to adopt a secret storage solution in your
-implementation, such as [Vault], but this is NOT a requirement.
+implementation, such as [Vault][2], but this is NOT a requirement.
 
 > You are free to rely on OSS libraries in your implementation. The
 > libraries are intentionally left out of the instructions so that you
 > learn how to discover and adopt external libraries into your project.
+
+  [1]: https://golang.org/pkg/crypto/sha256
+  [2]: https://www.vaultproject.io
 
 ## 2 JWT verification
 
@@ -54,7 +57,10 @@ HTTP header).
 
 Add a `/login` endpoint that can be used to generate a JWT token for a user
 that already exists in the `users` table. This endpoint should only work for
-users the provide a valid pair of a username and password.
+users that provide a valid username, password pair.
+
+> Make sure that you return an appropriate error code and message when the user
+> provides an invalid password. See if you can write a test for this, too!
 
 ## Submitting
 

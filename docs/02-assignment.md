@@ -34,12 +34,12 @@ before getting started.
 
 ## 2 SQL Migration
 
-Your second task builds upon **1 User endpoints**, but requires that you
-adapt your implementation to use a SQL migration file (if it doesn't
-already). You'll notice that the `issues` table schema is implemented in
-`data/sql/migrations/001_initial_schema.{down,up}.sql`. If you added the
-definition for your `users` table there, split it into a separate set of
-`data/sql/migrations/002_users.{down,up}.sql` files.
+Your second task builds upon [1 User endpoints](#1-user-endpoints), but
+requires that you adapt your implementation to use a SQL migration file
+(if it doesn't already). You'll notice that the `issues` table schema is
+implemented in `data/sql/migrations/001_initial_schema.{down,up}.sql`. If
+you added the definition for your `users` table there, split it into a
+separate set of `data/sql/migrations/002_users.{down,up}.sql` files.
 
 Now that the migration is split across multiple files (in chronological order),
 we'll need to add an integration test to the `migration` package. Specifically,
