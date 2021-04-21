@@ -245,5 +245,3 @@ library actually provides a [httptest][6] package that helps with this exactly.
 You'll be interacting with this package more in the [next assignment](./06-assignment.md)!
 
   [6]: https://golang.org/pkg/net/http/httptest
-
-
