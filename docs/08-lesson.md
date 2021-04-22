@@ -7,7 +7,7 @@ slug: /lessons/8
 As we near the conclusion of the course, we'll turn our attention to
 a paradigm that's used in all of the programming languages we use and
 interact with. This lesson will feel a little more philosophical and
-begins to ask and answer questions like, "How are programming lanauges
+begins to ask and answer questions like, "How are programming languages
 written?"
 
 ## What is metaprogramming?
