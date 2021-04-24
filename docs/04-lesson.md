@@ -1,6 +1,6 @@
 ---
 id: 04-lesson
-title: Middleware
+title: 2.5 Middleware
 slug: /lessons/4
 ---
 

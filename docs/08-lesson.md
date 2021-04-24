@@ -1,6 +1,6 @@
 ---
 id: 08-lesson
-title: Code that writes code
+title: 5.1 Code that writes code
 slug: /lessons/8
 ---
 

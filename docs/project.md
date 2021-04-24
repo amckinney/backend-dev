@@ -1,6 +1,6 @@
 ---
 id: project
-title: Project
+title: 6.1 Project
 slug: /assignments/project
 ---
 

@@ -1,6 +1,6 @@
 ---
 id: 07-lesson
-title: Continuous integration
+title: 4.1 Continuous integration
 slug: /lessons/7
 ---
 

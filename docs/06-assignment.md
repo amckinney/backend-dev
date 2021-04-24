@@ -1,6 +1,6 @@
 ---
 id: 06-assignment
-title: Assignment 6
+title: 3.4 Assignment 6
 slug: /assignments/6
 ---
 

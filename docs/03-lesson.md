@@ -1,6 +1,6 @@
 ---
 id: 03-lesson
-title: Authentication
+title: 2.3 Authentication
 slug: /lessons/3
 ---
 

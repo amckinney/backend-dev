@@ -9,13 +9,13 @@
     ],
     "Units": [
         {
-            "Command line programming": [
+            "1 Command line programming": [
                 "01-lesson",
                 "01-assignment"
             ]
         },
         {
-            "Server-side programming": [
+            "2 Server-side programming": [
                 "02-lesson",
                 "02-assignment",
                 "03-lesson",
@@ -25,7 +25,7 @@
             ]
         },
         {
-            "RPC": [
+            "3 RPC": [
                 "05-lesson",
                 "05-assignment",
                 "06-lesson",
@@ -33,19 +33,19 @@
             ]
         },
         {
-            "CI": [
+            "4 CI": [
                 "07-lesson",
                 "07-assignment"
             ]
         },
         {
-            "Metaprogramming": [
+            "5 Metaprogramming": [
                 "08-lesson",
                 "08-assignment"
             ]
         },
         {
-            "Final": [
+            "6 Final": [
                 "project"
             ]
         }

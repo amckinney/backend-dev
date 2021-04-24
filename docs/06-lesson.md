@@ -1,6 +1,6 @@
 ---
 id: 06-lesson
-title: Mocking
+title: 3.3 Mocking
 slug: /lessons/6
 ---
 

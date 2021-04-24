@@ -1,6 +1,6 @@
 ---
 id: 01-lesson
-title: The shell
+title: 1.1 The shell
 slug: /lessons/1
 ---
 

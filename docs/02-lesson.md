@@ -1,6 +1,6 @@
 ---
 id: 02-lesson
-title: Data modeling
+title: 2.1 Data modeling
 slug: /lessons/2
 ---
 
