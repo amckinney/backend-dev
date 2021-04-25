@@ -80,16 +80,14 @@ as mocking.
 ### Unit 4: Continuous integration (CI)
 
 The implementation of an application is really only the first step in the software release
-process. At this stage, we'll learn how applications can be continuously tested and verified
+process. At this stage, you'll learn how applications can be continuously tested and verified
 with GitHub Actions so that you're far less likely to publish bugs in production code.
-
-This section also depends on a working understanding of build systems, and will link back into
-the knowledge acquired in the first unit on command line programming.
+Additionally, you'll learn how to write your own cron job and deploy it in production.
 
 ### Unit 5: Metaprogramming
 
 This section will teach you the basics of how programming languages are built: writing
-programs that write other programs. We won't be writing a compiler in this class, but we
+programs that write other programs. We won't be writing a compiler in this class, but you
 will see how software engineers can leverage metaprogramming to build powerful abstractions
 and tools in their production systems.
 
