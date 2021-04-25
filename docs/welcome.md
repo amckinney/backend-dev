@@ -81,7 +81,7 @@ enhancing strategies, such as caching.
 
 The implementation of an application is really only the first step in the software release
 process. At this stage, we'll learn how applications can be continuously tested and verified
-with Github Actions so that you're far less likely to publish bugs in production code.
+with GitHub Actions so that you're far less likely to publish bugs in production code.
 
 This section also depends on a working understanding of build systems, and will link back into
 the knowledge acquired in the first unit on command line programming.

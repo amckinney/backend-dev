@@ -80,16 +80,16 @@ or check out other frameworks like [React][8] or [Vue][9].
   [8]: https://reactjs.org
   [9]: https://vuejs.org
 
-### Github action
+### GitHub action
 
 In the [continous integration assignment](./07-assignment.md), you gained some experience writing
-workflows that run in Github Actions, but we didn't explore what it takes to write an action for
+workflows that run in GitHub Actions, but we didn't explore what it takes to write an action for
 public consumption.
 
 Think about some actions that would be useful to integrate into your repository. Try [writing an
-action in Javascript][10] and [publish it on the Github Action Marketplace][11]!
+action in Javascript][10] and [publish it on the GitHub Action Marketplace][11]!
 
-> You can even call the Github API from within a Github Action using the [octokit module][12],
+> You can even call the GitHub API from within a GitHub Action using the [octokit module][12],
 > so that might be a good place to start!
 
   [10]: https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action

@@ -14,7 +14,7 @@ the [GitHub issues][1] feature you implemented in the [previous assignment](./05
 
   [1]: https://docs.github.com/en/github/managing-your-work-on-github/about-issues
 
-## 1 Mock Github client
+## 1 Mock GitHub client
 
 Your first task is to implement a [mock implementation][2] of the GitHub client you created
 in the previous assignment. By definition of a mock, the implementation MUST implement all

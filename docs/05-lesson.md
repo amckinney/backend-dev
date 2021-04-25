@@ -18,7 +18,7 @@ A [remote procedure call][1] (*RPC*) is an abstraction used to perform
 a network call to execute some piece of logic in another process running
 on another server. This is particularly useful to further *decouple*
 services that interoperate with one another, and for services to provide
-functionality to others (sometimes as a product). For example, [Github][2]
+functionality to others (sometimes as a product). For example, [GitHub][2]
 publically exposes their API so that developers can integrate with it in
 their own systems.
 
@@ -87,13 +87,13 @@ the caller (both the CLI and the server) constructs an instance of an [http.Clie
 and uses the [http.Client.Do][10] method to issue the call. As you can see, it uses
 the same `http.Request` and `http.Response` types that we mentioned above.
 
-For example, suppose that we wanted to make an HTTP request to Github in order to get
+For example, suppose that we wanted to make an HTTP request to GitHub in order to get
 all of the repositories contained within the [golang organization][11]. We can consult
-the Github documentation and find the [list organization repositories][12] API and write
+the GitHub documentation and find the [list organization repositories][12] API and write
 client-side code that interacts with it.
 
 ```go
-// repository is a subset of the Github repository response
+// repository is a subset of the GitHub repository response
 // structure used in the listOrganizationRepositories endpoint.
 // For details, please see the following:
 // https://docs.github.com/en/rest/reference/repos#list-organization-repositories
@@ -118,7 +118,7 @@ func listOrganizationRepositories(
 		return nil, err
 	}
 	request.Header.Add("Content-Type", "application/json")
-	request.Header.Add("Accept", "application/vnd.github.v3+json") // Github API recommendation
+	request.Header.Add("Accept", "application/vnd.github.v3+json") // GitHub API recommendation
 
 	response, err := client.Do(request)
 	if err != nil {

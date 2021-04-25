@@ -11,7 +11,7 @@ slug: /assignments/1
 
 In this assignment, you are tasked with working with the command line in
 a variety of ways. By the end, you will have developed multiple commands
-(one in `bash` and one in `go`). You will also have a new Github repository
+(one in `bash` and one in `go`). You will also have a new GitHub repository
 that contains your environment-specific files so that you can easily restore
 your development environment if you ever replace your current hardware.
 
@@ -23,7 +23,7 @@ you change jobs, or you just decide that you want to upgrade your machine,
 you'll want an easy way to get things working as you like them quickly as you
 can.
 
-Create a new *dotfiles* repository on Github on the user profile you plan
+Create a new *dotfiles* repository on GitHub on the user profile you plan
 to use for this class (we recommend that you use your personal profile).
 Initialize your repository with a `README.md`, and create (at least) the
 following files:
@@ -89,7 +89,7 @@ directory, and create a pull request that contains your solution.
 ## 3 Go CLI
 
 In your final task for this assignment, we'll switch gears and implement a simple command for
-the `Issue Tracker` application written in Go. If you haven't already, create a new Github
+the `Issue Tracker` application written in Go. If you haven't already, create a new GitHub
 repository from the [issue-tracker-template][4], and make sure that you can run it with
 the following command.
 
