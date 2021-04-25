@@ -22,6 +22,8 @@ A few things are expected of students entering this class:
 
   * You have a working understanding of data structures and algorithms,
     equivalent to two semesters of undergraduate coursework.
+  * You have a working understanding of the Go programming language,
+    fulfilled by the [Tour of Go](https://tour.golang.org).
   * You are comfortable with remote work and can operate independently.
   * You are willing to participate in peer review and collaborate
     with a mentor.
@@ -29,7 +31,6 @@ A few things are expected of students entering this class:
 ## Learning outcomes
 
 * Learn to operate autonomously in a realistic software engineering environment.
-* Use the Go programming language.
 * Develop an HTTP server that defines a REST/JSON API.
 * Store data in a relational, SQL database.
 * Work with build systems and other automation techniques, such as CI workflows.
