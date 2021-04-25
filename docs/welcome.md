@@ -74,8 +74,8 @@ of these components fit together to build a production-ready system.
 
 Once you have a foundation of server-side programming, you'll continue to learn how remote
 procedure calls (RPCs) are used and integrated into existing systems. This section will also
-develop your understanding of microservices, as well as additional testing and performance
-enhancing strategies, such as caching.
+develop your understanding of microservices, as well as additional testing strategies, such
+as mocking.
 
 ### Unit 4: Continuous integration (CI)
 
