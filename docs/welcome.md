@@ -6,15 +6,15 @@ slug: /
 
 ## Overview
 
-As computer science students, we're actively learning new foreign concepts,
+As computer scientists, we're always learning about foreign concepts,
 data structures, and algorithms. However, in most undergraduate computer
 science curricula, we rarely get to incorporate these principles into
 designing a realistic software application.
 
-**This class is primarily meant for the students interested in learning how to
-work as a software engineer.** Not all of you will have an opportunity to
-work in the software engineering industry via an internship, so this class is
-built to fill in the knowledge gaps that you would otherwise learn in the industry.
+This class is primarily meant for the students interested in learning how to
+**code as a software engineer.** Not everyone has the opportunity to work in the
+software engineering industry through an internship, so this class is built to
+fill in the knowledge gaps that you would otherwise learn in the industry.
 
 ## Readiness
 
