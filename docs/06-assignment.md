@@ -50,8 +50,8 @@ requires that you use an [httptest.Server][5] that responds to HTTP requests in 
 ## 4 Discuss
 
 Write up a short discussion that compares and contrasts the testing strategies you implemented here.
-What did you like about the *mock* approach? What were its tradeoffs, if any? Similarly, what do you think
-about the `httptest` package, and what were its tradeoffs? Is it better to use mocks or `httptest`? Explain.
+What did you like about the *mock* approach? What were its trade-offs, if any? Similarly, what do you think
+about the `httptest` package, and what were its trade-offs? Is it better to use mocks or `httptest`? Explain.
 
 Your discussion should be written in a `docs/testing.md` file and checked-in to your repository.
 

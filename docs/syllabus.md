@@ -6,7 +6,7 @@ slug: /syllabus
 
 ## Grading
 
-The course is graded on a toal of 1000 points exactly, such that 10 points
+The course is graded on a total of 1000 points exactly, such that 10 points
 represent a single percentage point. With that said, the course uses the
 traditional A-F grading scale, where each grade band is represented below.
 

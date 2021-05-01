@@ -71,8 +71,8 @@ is suitable in different situations, some of which are described below.
 
 #### Piazza
 
-Piazza is used for mentors and students to post querstions or tips that *should be shared
-amongst all other students*. For example, if you find yourself refencing an insightful
+Piazza is used for mentors and students to post questions or tips that *should be shared
+amongst all other students*. For example, if you find yourself referencing an insightful
 article or website in a code review, make a post about it! The course staff and future mentors
 will be able to learn from previous knowledge sharing, so these efforts will improve the
 course over time.

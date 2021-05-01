@@ -82,7 +82,7 @@ or check out other frameworks like [React][8] or [Vue][9].
 
 ### GitHub action
 
-In the [continous integration assignment](./07-assignment.md), you gained some experience writing
+In the [continuous integration assignment](./07-assignment.md), you gained some experience writing
 workflows that run in GitHub Actions, but we didn't explore what it takes to write an action for
 public consumption.
 

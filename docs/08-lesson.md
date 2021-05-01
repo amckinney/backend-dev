@@ -35,7 +35,7 @@ The compiler usually works by translating higher-level languages to lower-level
 languages, so that programmers can write code with stronger abstractions and
 therefore a simpler development environment.
 
-However, there's always a tradeoff: a compiler ideally produces efficient code in
+However, there's always a trade-off: a compiler ideally produces efficient code in
 the low-level representation, but it's often not as efficient as it could be written
 manually. This is not always the case though; [Common Lisp][3] (which compiles to C)
 was found to be faster than C in [a specific area of genetic programming][4]. This
@@ -110,7 +110,7 @@ $ go build main.go
 ./main.go:3:1: syntax error: non-declaration statement outside function body
 ```
 
-In this case, the Go compiler noticed that a syntax error occured because it's interpreting
+In this case, the Go compiler noticed that a syntax error occurred because it's interpreting
 the `fun` token as a non-declaration statement (which is outside of a function body).
 
 When the *parser* is successful, it will produce a valid AST. There's a cool tool that will
@@ -200,7 +200,7 @@ gclocals·33cdeccccebe80329f1fdbee7f5874cb SRODATA dupok size=8
 	0x0000 01 00 00 00 00 00 00 00                          ........
 ```
 
-And from there, the assmebly is compiled into an executable that we can run on our machine!
+And from there, the assembly is compiled into an executable that we can run on our machine!
 Fortunately, the `go` tool does all of this for us with a simple run of `go build`. Suppose
 that we had the following program:
 

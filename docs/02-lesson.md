@@ -40,7 +40,7 @@ to implement and, more importantly, reuse the code elsewhere.
 
 The *ER model* helps reduce coupling by intentionally isolating each *entity*
 from one another, but instead defining *relationships* between them that can
-indepednently *evolve*, or change over time.
+independently *evolve*, or change over time.
 
   [3]: https://en.wikipedia.org/wiki/Coupling_(computer_programming)
 
@@ -51,7 +51,7 @@ aspects of software development. The `Issue Tracker` application implements
 this concept with the core `Issue` entity and applies it to three different
 layers: the [API][4], the [business logic][5], and [persistence][6] layers.
 
-The term *layer* refers to the definition used in [Multitier architecture][7],
+The term *layer* refers to the definition used in [Multi-tier architecture][7],
 which can be viewed as (yet another) strategy to separate concerns within an
 application. The *layer* concerns itself with categorizing different aspects
 of your application, such as *presenting* data to your users (the *API*),
@@ -108,7 +108,7 @@ there are different primary key constraints in specific technologies.
 
 This course focuses on relational databases, and uses [SQLite][13] in particular.
 Note that NoSQL databases certainly have a variety of benefits, but there is always
-a tradeoff ([there ain't no such thing as a free lunch][14]). Discussing the tradeoffs
+a trade-off ([there ain't no such thing as a free lunch][14]). Discussing the trade-offs
 between these technologies is out-of-scope for this class, but we encourage you to
 research this topic on your own! This could be a particularly interesting avenue to
 explore in the **Final Project**.

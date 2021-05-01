@@ -8,8 +8,8 @@ slug: /
 
 As computer science students, we're actively learning new foreign concepts,
 data structures, and algorithms. However, in most undergraduate computer
-science curriciulums, we rarely get to incorporate these principles
-into designing a realistic software application.
+science curricula, we rarely get to incorporate these principles into
+designing a realistic software application.
 
 **This class is primarily meant for the students interested in learning how to
 work as a software engineer.** Not all of you will have an opportunity to

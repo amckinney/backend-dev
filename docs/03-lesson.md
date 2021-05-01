@@ -47,7 +47,7 @@ As you've probably noticed, a variety of popular websites support persistent
 sessions, such that you're still logged in after days, weeks, or even months
 away from the platform (e.g. [Amazon][5]). Web browsers are able to support this
 functionality with [HTTP cookies][6], which are small pieces of information that
-are exchanged between the Web broswer client and the application server. In many
+are exchanged between the Web browser client and the application server. In many
 cases, a cookie is used to *personalize* your experience, such that it is used
 to recognize which user is logged in.
 
@@ -102,7 +102,7 @@ the client's browser with the [Set-Cookie response header][13].
 
 Then, for *authorization*, the *JWT* can encode a variable set of *custom claims* that
 can be recognized by the application server to grant additional permissions. For example,
-a user with `admin` privelages might have a *JWT* that contains a `<$payload>` with the
+a user with `admin` privileges might have a *JWT* that contains a `<$payload>` with the
 following:
 
 ```json

@@ -6,7 +6,7 @@ slug: /lessons/1
 
 At this stage in your programming career, you're likely well acquainted with
 the command line and basic shell programming. Whether it's navigating around
-your local filesystem, ssh'ing into remote machines, or commiting your code
+your local filesystem, ssh'ing into remote machines, or committing your code
 in `git`, each of these common operations often involve using the command line
 in your terminal of choice.
 

@@ -37,7 +37,7 @@ upon the `http.Request` and `http.Response` constructs.
 
 APIs have had [explosive growth][4] in recent years and have become the
 foundational unit upon which we build software applications. As a result,
-a new software architecture has been born called the [microservice
+a new software architecture has been created called the [microservice
 architecture][5]. In short, *microservices* are services responsible for
 a small set of functionality and built so that they can be *composed* together
 to orchestrate complex interactions. Note that the alternative is referred to
@@ -48,7 +48,7 @@ Microservices are yet another example of a trend towards reducing *coupling*
 between systems, and are built to mirror the [Unix philosophy][7]. In short,
 the *Unix philosophy* optimizes for small, modular programs that can be composed
 together via I/O redirection. A few of the important rules paraphrased from this
-philosophy include using composiiton, avoiding unnecessary output, and writing
+philosophy include using composition, avoiding unnecessary output, and writing
 readable programs.
 
 Recall from [The shell](./01-lesson.md) that command line programs are built so
@@ -58,11 +58,11 @@ for application servers exposed over the internet!
 
 > Note that the `Issue Tracker` application is actually built as a monolith in
 > its current state: all of the functionality executes in a single process. There
-> are many tradeoffs for choosing one architecture over the other and there is
+> are many trade-offs for choosing one architecture over the other and there is
 > NOT a one-size-fits-all solution. Given that we're operating as a small team
 > (an individual), the monolithic approach is arguably more suitable for this
 > development environment. Please read this informative [blog post][8] to better
-> understand the tradeoffs between each.
+> understand the trade-offs between each.
 
   [4]: https://www.programmableweb.com/news/apis-show-faster-growth-rate-2019-previous-years/research/2019/07/17
   [5]: https://microservices.io

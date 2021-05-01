@@ -31,7 +31,7 @@ the code continues to build and all tests pass.
 [Continuous deployment][3] is an extension to continuous integration that concerns
 itself with how the software is deployed to production environments. As opposed to
 continuous integration, whose benefits are less debatable, there are a variety of
-tradeoffs that come with continuous deployment.
+trade-offs that come with continuous deployment.
 
 #### Pros
 
@@ -65,7 +65,7 @@ data.
 
 When a user asks to delete their data, do we first delete the record from the external storage
 solution and then remove it from our relational database, or do we first remove it from the
-relational database and then remove it from the external storage soltuion? What happens if
+relational database and then remove it from the external storage solution? What happens if
 either of these calls fails?
 
 The external storage solution does not abide to the transaction created for our application,

@@ -79,7 +79,7 @@ to implement this feature. Start by creating another package in the `cmd` direct
 Finally, add [Codecov][1] to the repository so that we can show off how much test coverage we
 have in our codebase (if the coverage isn't great, that should motivate future development work).
 
-> Hint: start with the [Qucikstart][7] guide!
+> Hint: start with the [Quickstart][7] guide!
 
   [7]: https://docs.codecov.io/docs/quick-start
 

@@ -39,7 +39,7 @@ middleware in your application. The `Issue Tracker` application takes advantage
 of the [chi][4] HTTP framework that provides a handy [chi.Mux.Use][5] method to
 easily configure middleware, but it helps to see how this works under the hood.
 
-Using the standard [net/http][6] library, a no-op, passthrough middleware can be
+Using the standard [net/http][6] library, a no-op, pass-through middleware can be
 implemented with the following:
 
 ```go

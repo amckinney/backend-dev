@@ -19,7 +19,7 @@ write a program that produces a [DOT][2] visualization of your application.
 
 Your first task is to create a program in the `cmd/dot` directory that loads
 Go packages into an `*types.Package` and prints out each of the loaded package
-names. the If your program fails to parse any of the packages, it should return
+names. If your program fails to parse any of the packages, it should return
 a non-zero exit code.
 
 Example use of this program is shown below:
